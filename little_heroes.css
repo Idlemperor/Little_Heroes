@@ -114,7 +114,7 @@
 		left:0%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 
 		cursor:pointer;
@@ -124,10 +124,10 @@
 	#InventoryTab
 	{
 		position:absolute;
-		left:14.2%;
+		left:12.5%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 
 		cursor:pointer;
@@ -137,10 +137,10 @@
 	#BuildingsTab
 	{
 		position:absolute;
-		left:28.4%;
+		left:25%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 
 		cursor:pointer;
@@ -150,10 +150,10 @@
 	#HeroesTab
 	{
 		position:absolute;
-		left:42.6%;
+		left:37.5%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 
 		cursor:pointer;
@@ -163,10 +163,10 @@
 	#PetsTab
 	{
 		position:absolute;
-		left:56.8%;
+		left:50%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 
 		cursor:pointer;
@@ -176,10 +176,10 @@
 	#DungeonTab
 	{
 		position:absolute;
-		left:71%;
+		left:62.5%;
 		top:0%;
 		
-		width:14.2%;
+		width:12.5%;
 		height:100%;
 		
 		cursor:pointer;
@@ -189,10 +189,23 @@
 	#ResearchTab
 	{
 		position:absolute;
-		left:85.2%;
+		left:75%;
 		top:0%;
 		
-		width:14.9%;
+		width:12.5%;
+		height:100%;
+	
+		cursor:pointer;
+	
+		z-index: 1;
+	}
+	#MarketTab
+	{
+		position:absolute;
+		left:87.5%;
+		top:0%;
+		
+		width:12.5%;
 		height:100%;
 	
 		cursor:pointer;
@@ -211,7 +224,7 @@
 		
 		z-index:1;
 	}
-	#InventoryWindow, #BuildingsWindow, #HeroesWindow, #PetsWindow, #DungeonWindow, #ResearchWindow
+	#InventoryWindow, #BuildingsWindow, #HeroesWindow, #PetsWindow, #DungeonWindow, #ResearchWindow, #MarketWindow
 	{
 		position:absolute;
 		left:0%;
@@ -250,4 +263,50 @@
 		border-top:none;
 		border-left:none;
 		border-bottom:none;
+	}
+	
+	.Button-Normal
+	{
+		border-radius: 5px;
+		background-color: brown;
+		
+		box-shadow: inset 0 -6px 1px rgba(123,123,123,.34);
+		color: #fff;
+		text-align:center;
+		padding: 10px 50px;
+		font-size: 42px;
+		font-family: arial;
+		font-weight: bold;
+		display: inline-block;
+		width: 200px;
+	}
+	.Button-Hover
+	{
+		border-radius: 5px;
+		background-color: #34e57f;
+		
+		box-shadow: inset 0 -6px 1px rgba(123,123,123,.34);
+		color: #fff;
+		text-align:center;
+		padding: 10px 50px;
+		font-size: 42px;
+		font-family: arial;
+		font-weight: bold;
+		display: inline-block;
+		width: 200px;
+	}
+	.Button-Pressed
+	{
+		border-radius: 5px;
+		background-color: #29b564;
+		
+		box-shadow: inset 0 5px 0px rgba(123,123,123,.34);
+		color: #fff;
+		text-align:center;
+		padding: 10px 50px;
+		font-size: 42px;
+		font-family: arial;
+		font-weight: bold;
+		display: inline-block;
+		width: 200px;
 	}

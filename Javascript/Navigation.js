@@ -1,6 +1,5 @@
 function display(window)
 {
-
 	if (window == 'Resources')
 	{
 		document.getElementById("ResourceWindow").style.display = "inline";
@@ -10,6 +9,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab-Selected";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -18,6 +18,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Inventory')
@@ -29,6 +30,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab-Selected";
@@ -37,6 +39,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Buildings')
@@ -48,6 +51,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -56,6 +60,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Heroes')
@@ -67,6 +72,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -75,6 +81,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Pets')
@@ -86,6 +93,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "inline";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -94,6 +102,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab-Selected";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Dungeon')
@@ -105,6 +114,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "inline";
 		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -113,6 +123,7 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab-Selected";
 		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Research')
@@ -124,6 +135,7 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "inline";
+		document.getElementById('MarketWindow').style.display = "none";
 		
 		document.getElementById('ResourceTab').className = "SelectionTab";
 		document.getElementById('InventoryTab').className = "SelectionTab";
@@ -132,5 +144,27 @@ function display(window)
 		document.getElementById('PetsTab').className = "SelectionTab";
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab-Selected";
+		document.getElementById('MarketTab').className = "SelectionTab";
+	};
+	
+	if (window == 'Market')
+	{
+		document.getElementById("ResourceWindow").style.display = "none";
+		document.getElementById("InventoryWindow").style.display = "none";
+		document.getElementById("BuildingsWindow").style.display = "none";
+		document.getElementById('HeroesWindow').style.display = "none";
+		document.getElementById('PetsWindow').style.display = "none";
+		document.getElementById('DungeonWindow').style.display = "none";
+		document.getElementById('ResearchWindow').style.display = "none";
+		document.getElementById('MarketWindow').style.display = "inline";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
+		document.getElementById('MarketTab').className = "SelectionTab-Selected";
 	};
 };
