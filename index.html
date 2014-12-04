@@ -8,7 +8,7 @@
 	</head>
 	
 	<body>
-		<audio controls loop id="Audio">
+		<audio controls autoplay loop id="Audio">
 			<source src="Sounds/background_music.mp3" type="audio/mpeg">
 			If you see this, your browser does not support this audio element.
 		</audio>
@@ -27,28 +27,50 @@
 		</div>
 		<div class="Container" id="DisplayWindow">			
 			<div id="SelectionBar">
-				<div class="Selected" id="ResourceTab">
+				<div id="ResourceTab">
 					Resources
 				</div>
-				<div class="" id="InventoryTab">
+				<div id="InventoryTab">
 					Inventory
 				</div>
-				<div class="" id="BuildingsTab">
+				<div id="BuildingsTab">
 					Buildings
 				</div>
-				<div class="" id="HeroesTab">
+				<div id="HeroesTab">
 					Heroes
 				</div>
-				<div class="" id="PetsTab">
+				<div id="PetsTab">
 					Pets
 				</div>
-				<div class="" id="DungeonTab">
+				<div id="DungeonTab">
 					Dungeon
 				</div>
-				<div class="" id="ResearchTab">
+				<div id="ResearchTab">
 					Research
 				</div>
-			</div>			
+			</div>	
+
+			<div id="ResourceWindow" onClick="display('Resources')">
+				Resource Window
+			</div>
+			<div id="InventoryWindow" onClick="display('Inventory')">
+				Inventory Window
+			</div>
+			<div id="BuildingsWindow" onClick="display('Buildings')">
+				Buildings Window
+			</div>
+			<div id="HeroesWindow" onClick="display('Heroes')">
+				Heroes Window
+			</div>
+			<div id="PetsWindow" onClick="display('Pets')">
+				Pets Window
+			</div>
+			<div id="DungeonWindow" onClick="display('Dungeon')">
+				Dungeon Window
+			</div>
+			<div id="ResearchWindow" onClick="display('Research')">
+				Research Window
+			</div>
 		</div>
 	
 		<script src="Javascript/navigation.js"></script>
