@@ -10,6 +10,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab-Selected";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Inventory')
@@ -21,6 +29,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab-Selected";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Buildings')
@@ -32,6 +48,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab-Selected";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Heroes')
@@ -43,6 +67,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab-Selected";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Pets')
@@ -54,6 +86,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "inline";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab-Selected";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Dungeon')
@@ -65,6 +105,14 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "inline";
 		document.getElementById('ResearchWindow').style.display = "none";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab-Selected";
+		document.getElementById('ResearchTab').className = "SelectionTab";
 	};
 	
 	if (window == 'Research')
@@ -76,5 +124,13 @@ function display(window)
 		document.getElementById('PetsWindow').style.display = "none";
 		document.getElementById('DungeonWindow').style.display = "none";
 		document.getElementById('ResearchWindow').style.display = "inline";
+		
+		document.getElementById('ResourceTab').className = "SelectionTab";
+		document.getElementById('InventoryTab').className = "SelectionTab";
+		document.getElementById('BuildingsTab').className = "SelectionTab";
+		document.getElementById('HeroesTab').className = "SelectionTab";
+		document.getElementById('PetsTab').className = "SelectionTab";
+		document.getElementById('DungeonTab').className = "SelectionTab";
+		document.getElementById('ResearchTab').className = "SelectionTab-Selected";
 	};
 };

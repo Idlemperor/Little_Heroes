@@ -8,7 +8,7 @@
 	</head>
 	
 	<body>
-		<audio controls autoplay loop id="Audio">
+		<audio controls loop id="Audio">
 			<source src="Sounds/background_music.mp3" type="audio/mpeg">
 			If you see this, your browser does not support this audio element.
 		</audio>
@@ -23,56 +23,59 @@
 			Event Log
 		</div>
 		<div class="Container" id="LinksBar">
-			Links Bar
+			<a href="https://twitter.com/KhyruKats" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @KhyruKats</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		</div>
+		
 		<div class="Container" id="DisplayWindow">			
 			<div id="SelectionBar">
-				<div id="ResourceTab">
+				<div class="SelectionTab-Selected" id="ResourceTab" onClick="display('Resources')">
 					Resources
 				</div>
-				<div id="InventoryTab">
+				<div class="SelectionTab" id="InventoryTab" onClick="display('Inventory')">
 					Inventory
 				</div>
-				<div id="BuildingsTab">
+				<div class="SelectionTab" id="BuildingsTab" onClick="display('Buildings')">
 					Buildings
 				</div>
-				<div id="HeroesTab">
+				<div class="SelectionTab" id="HeroesTab" onClick="display('Heroes')">
 					Heroes
 				</div>
-				<div id="PetsTab">
+				<div class="SelectionTab" id="PetsTab" onClick="display('Pets')">
 					Pets
 				</div>
-				<div id="DungeonTab">
+				<div class="SelectionTab" id="DungeonTab" onClick="display('Dungeon')">
 					Dungeon
 				</div>
-				<div id="ResearchTab">
+				<div class="SelectionTab" id="ResearchTab" onClick="display('Research')">
 					Research
 				</div>
 			</div>	
 
-			<div id="ResourceWindow" onClick="display('Resources')">
+			<div id="ResourceWindow">
 				Resource Window
 			</div>
-			<div id="InventoryWindow" onClick="display('Inventory')">
+			<div id="InventoryWindow">
 				Inventory Window
 			</div>
-			<div id="BuildingsWindow" onClick="display('Buildings')">
+			<div id="BuildingsWindow">
 				Buildings Window
 			</div>
-			<div id="HeroesWindow" onClick="display('Heroes')">
+			<div id="HeroesWindow">
 				Heroes Window
 			</div>
-			<div id="PetsWindow" onClick="display('Pets')">
+			<div id="PetsWindow">
 				Pets Window
 			</div>
-			<div id="DungeonWindow" onClick="display('Dungeon')">
+			<div id="DungeonWindow">
 				Dungeon Window
 			</div>
-			<div id="ResearchWindow" onClick="display('Research')">
+			<div id="ResearchWindow">
 				Research Window
 			</div>
 		</div>
-	
+		
+		<script src="Javascript/core.js"></script>
 		<script src="Javascript/navigation.js"></script>
 	</body>
 </html>
