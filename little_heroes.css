@@ -20,13 +20,6 @@
 		border-left:none;
 		text-align:center;
 	}
-	#OptionsMenu:hover
-	{
-		height:75%;
-		opacity:0.9;
-		
-		z-index:5;
-	}
 	#ClockDisplay
 	{
 		background-color:#CCCCCC;
@@ -247,6 +240,56 @@
 		height:97%;
 		
 		z-index:3;
+	}
+	#WorkerCount
+	{
+		position:absolute;
+		top:3%;
+		right:0%;
+		
+		border:3px solid transparent;
+		border-color:brown;
+		border-right:none;
+		border-left:none;
+		border-bottom:none;		
+		
+		width:20%;
+	}
+	#WorkerAssignments
+	{
+		position:absolute;
+		top:8%;
+		right:0%;	
+		
+		width:20%;
+	}
+	#Resources
+	{
+		position:absolute;
+		top:3%;
+		left:0%;	
+		
+		border:3px solid transparent;
+		border-color:brown;
+		border-right:none;
+		border-left:none;
+		border-bottom:none;	
+		
+		width:20%;
+	}
+	#Inventory
+	{
+		position:absolute;
+		top:4%;
+		left:0%;	
+		
+		border:3px solid transparent;
+		border-color:brown;
+		border-right:none;
+		border-left:none;
+		border-bottom:none;	
+		
+		width:20%;
 	}
 	
 	.SelectionTab

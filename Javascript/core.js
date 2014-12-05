@@ -5,6 +5,9 @@ var week = 1;
 var day = 1;
 var season = "Spring";
 
+var lumberjacks = 0;
+var miners = 0;
+
 function writeEvent(event)
 {
 	var oldEvent1 = document.getElementById('event1').innerHTML;

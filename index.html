@@ -14,34 +14,38 @@
 		</audio>
 	
 		<div class="Container" id="OptionsMenu">
-			<u>Options Menu</u>
+			<u>Options Menu</u> ---
+			<button type="button" onClick="save()">Save Game</button>
+			<button type="button" onClick="load()">Load Game</button>
+			<button type="button" onClick="deleteSave()">Delete Game</button>
 		</div>
 		<div class="Container" id="ClockDisplay">
 			<b>Year <span id="year">1</span> / Month <span id="month">1</span> / Week <span id="week">1</span> / Day <span id="day">1</span> - <span id="season">Spring</span></b>
 		</div>
 		<div class="Container" id="EventLog">
-			<b><span id="event1">placeholder</span></b> <br><br>
-			<span id="event2">placeholder</span> <br><br>
-			<span id="event3">placeholder</span> <br><br>
-			<span id="event4">placeholder</span> <br><br>
-			<span id="event5">placeholder</span> <br><br>
-			<span id="event6">placeholder</span> <br><br>
-			<span id="event7">placeholder</span> <br><br>
-			<span id="event8">placeholder</span> <br><br>
-			<span id="event9">placeholder</span> <br><br>
-			<span id="event10">placeholder</span> <br><br>
-			<span id="event11">placeholder</span> <br><br>
-			<span id="event12">placeholder</span> <br><br>
-			<span id="event13">placeholder</span> <br><br>
-			<span id="event14">placeholder</span> <br><br>
-			<span id="event15">placeholder</span> <br><br>
-			<span id="event16">placeholder</span> <br><br>
-			<span id="event17">placeholder</span> <br><br>
-			<span id="event18">placeholder</span> <br><br>
-			<span id="event19">placeholder</span> <br><br>
-			<span id="event20">placeholder</span> <br><br>
-			<span id="event21">placeholder</span> <br><br>
-			<span id="event22">placeholder</span> <br><br>
+			<b><u>Event Log</u></b>
+			<b><span id="event1"></span></b> <br><br>
+			<span id="event2"></span> <br><br>
+			<span id="event3"></span> <br><br>
+			<span id="event4"></span> <br><br>
+			<span id="event5"></span> <br><br>
+			<span id="event6"></span> <br><br>
+			<span id="event7"></span> <br><br>
+			<span id="event8"></span> <br><br>
+			<span id="event9"></span> <br><br>
+			<span id="event10"></span> <br><br>
+			<span id="event11"></span> <br><br>
+			<span id="event12"></span> <br><br>
+			<span id="event13"></span> <br><br>
+			<span id="event14"></span> <br><br>
+			<span id="event15"></span> <br><br>
+			<span id="event16"></span> <br><br>
+			<span id="event17"></span> <br><br>
+			<span id="event18"></span> <br><br>
+			<span id="event19"></span> <br><br>
+			<span id="event20"></span> <br><br>
+			<span id="event21"></span> <br><br>
+			<span id="event22"></span> <br><br>
 		</div>
 		<div class="Container" id="LinksBar">
 			<a href="https://twitter.com/KhyruKats" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @KhyruKats</a>
@@ -77,10 +81,64 @@
 			</div>	
 
 			<div id="ResourceWindow">
-				Resource Window
+				<div id="Resources">
+					<b><u>Total Resources</u></b><br><br>
+					<table id="ResourceTable" style="width:100%; padding:5px">
+						<tr>
+							<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
+							<th>Wood</th>
+							<td><span id="wood">0</span></td>
+							<td>( <span id="woodPer">0</span> )</td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<td><img src="Images/Icons/stone_icon.png" alt="Stone Resource" style="width:20px;height:20px"></td>
+							<th>Stone</th>
+							<td><span id="stone">0</span></td>
+							<td>( <span id="stonePer">0</span> )</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div id="WorkerCount">
+					<b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
+				</div>
+				
+				<div id="WorkerAssignments">
+					<table id="ResourceTable" style="width:100%; padding:5px">
+						<tr>
+							<th>Lumberjacks</th>
+							<td><span id="lumberjacks">0</span></td>
+							<td><button type="button" onClick="hire(farmer)"> + </button></td>
+							<td><button type="button" onClick="fire(farmer)"> - </button></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th>Miners</th>
+							<td><span id="miners">0</span></td>
+							<td><button type="button" onClick="hire(miner)"> + </button></td>
+							<td><button type="button" onClick="fire(miner)"> - </button></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div id="InventoryWindow">
-				Inventory Window
+				<div id="Inventory">
+				<b><u>Inventory</u></b><br><br>
+				<table id="InventoryTable" style="width:100%; padding:5px">
+						<tr>
+							<td>Icon</td>
+							<th>Stone Dagger</th>
+							<td><span id="stoneDaggers">0</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<td>Icon</td>
+							<th>Leather Hat</th>
+							<td><span id="leatherHats">0</span></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div id="BuildingsWindow">
 				Buildings Window
