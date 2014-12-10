@@ -5,8 +5,16 @@ var week = 1;
 var day = 1;
 var season = "Spring";
 
+var freeWorkers = 0;
+var totalWorkers = 0;
 var lumberjacks = 0;
 var miners = 0;
+
+var goldAmount = 100;
+var woodAmount = 0;
+var stoneAmount = 0;
+
+var stoneDaggers = 0;
 
 function writeEvent(event)
 {
@@ -83,6 +91,20 @@ function clearEvents()
 	document.getElementById('event21').innerHTML = newEvent;
 	document.getElementById('event22').innerHTML = newEvent;
 };
+
+function gatherResources()
+{
+	var woodPer = lumberjacks;
+	var stonePer = miners;
+	
+	woodAmount = woodAmount + woodPer;
+	stoneAmount = stoneAmount + stonePer;
+	
+	document.getElementById('wood').innerHTML = woodAmount;
+	document.getElementById('woodPer').innerHTML = woodPer;
+	document.getElementById('stone').innerHTML = stoneAmount;
+	document.getElementById('stonePer').innerHTML = stonePer;
+}
 
 function advanceTime()
 {
@@ -169,7 +191,7 @@ function deleteSave()
 
 window.setInterval(function() //Game loop that runs every 1.5 seconds.
 {
-	
+	gatherResources();
 }, 1500); 
 
 window.setInterval(function() //Game loop that runs every 3 seconds.

@@ -85,39 +85,46 @@
 					<b><u>Resources</u></b><br><br>
 					<table id="ResourceTable" style="width:100%; padding:5px">
 						<tr>
+							<td><img src="Images/Icons/gold_icon.png" alt="Gold Resource" style="width:20px;height:20px"></td>
+							<th>Gold</th>
+							<td><span id="gold">100</span></td>
+						</tr>
+						<tr>
 							<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
 							<th>Wood</th>
 							<td><span id="wood">0</span></td>
-							<td>( <span id="woodPer">0</span> )</td>
+							<td>(+ <span id="woodPer">0</span> )</td>
 						</tr>
 						<tr></tr>
 						<tr>
 							<td><img src="Images/Icons/stone_icon.png" alt="Stone Resource" style="width:20px;height:20px"></td>
 							<th>Stone</th>
 							<td><span id="stone">0</span></td>
-							<td>( <span id="stonePer">0</span> )</td>
+							<td>(+ <span id="stonePer">0</span> )</td>
 						</tr>
 					</table>
 				</div>
-			
+				
 				<div class="RightPane">
-					<b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
+					<button class="Button" type="button" onClick="hire('worker')">Hire a Worker - 10 Gold</button>
+					<br><br><b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
 				</div>
 				
 				<div id="WorkerAssignments">
+					<br><br>
 					<table id="ResourceTable" style="width:100%; padding:5px">
 						<tr>
 							<th>Lumberjacks</th>
 							<td><span id="lumberjacks">0</span></td>
-							<td><button type="button" onClick="hire(farmer)"> + </button></td>
-							<td><button type="button" onClick="fire(farmer)"> - </button></td>
+							<td><button type="button" onClick="hire('lumberjack')"> + </button></td>
+							<td><button type="button" onClick="fire('lumberjack')"> - </button></td>
 						</tr>
 						<tr></tr>
 						<tr>
 							<th>Miners</th>
 							<td><span id="miners">0</span></td>
-							<td><button type="button" onClick="hire(miner)"> + </button></td>
-							<td><button type="button" onClick="fire(miner)"> - </button></td>
+							<td><button type="button" onClick="hire('miner')"> + </button></td>
+							<td><button type="button" onClick="fire('miner')"> - </button></td>
 						</tr>
 					</table>
 				</div>
@@ -130,27 +137,28 @@
 							<td>Icon</td>
 							<th>Stone Dagger</th>
 							<td><span id="stoneDaggers">0</span></td>
+							<td><b>Value</b></td>
 						</tr>
 						<tr></tr>
+					</table>
+				</div>
+				<div class="MiddlePane">
+				<b><u>Crafting</u></b><br><br>
+				<table id="CraftingTable" style="width:100%; padding:5px">
 						<tr>
-							<td>Icon</td>
-							<th>Leather Hat</th>
-							<td><span id="leatherHats">0</span></td>
+							<td><button class="Button" type="button" onClick="craft('stoneDagger')">Craft a Stone Dagger - 5 Stone & 5 Wood</button></td>
 						</tr>
+						<tr></tr>
 					</table>
 				</div>
 				<div class="RightPane">
 				<b><u>Upgrades</u></b><br><br>
 				<table id="UpgradesTable" style="width:100%; padding:5px">
 						<tr>
-							<th>Stone Dagger Upgrade</th>
-							<td><span id="stoneDaggerUpgradeCost">Cost</span></td>
+							<th>Sharper Blade</th>
+							<td><span id="stoneDaggerUpgradeCost">10 Gold</span></td>
 						</tr>
 						<tr></tr>
-						<tr>
-							<th>Leather Hat Upgrade</th>
-							<td><span id="leatherHatUpgradeCost">Cost</span></td>
-						</tr>
 					</table>
 				</div>
 			</div>
@@ -408,6 +416,8 @@
 		</div>
 		
 		<script src="Javascript/core.js"></script>
+		<script src="Javascript/crafting.js"></script>
+		<script src="Javascript/workers.js"></script>
 		<script src="Javascript/navigation.js"></script>
 	</body>
 </html>
