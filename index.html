@@ -23,7 +23,7 @@
 			<b>Year <span id="year">1</span> / Month <span id="month">1</span> / Week <span id="week">1</span> / Day <span id="day">1</span> - <span id="season">Spring</span></b>
 		</div>
 		<div class="Container" id="EventLog">
-			<b><u>Event Log</u></b>
+			<b><u>Event Log</u></b> <br><br>
 			<b><span id="event1"></span></b> <br><br>
 			<span id="event2"></span> <br><br>
 			<span id="event3"></span> <br><br>
@@ -81,8 +81,8 @@
 			</div>	
 
 			<div id="ResourceWindow">
-				<div id="Resources">
-					<b><u>Total Resources</u></b><br><br>
+				<div class="LeftPane">
+					<b><u>Resources</u></b><br><br>
 					<table id="ResourceTable" style="width:100%; padding:5px">
 						<tr>
 							<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
@@ -100,7 +100,7 @@
 					</table>
 				</div>
 			
-				<div id="WorkerCount">
+				<div class="RightPane">
 					<b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
 				</div>
 				
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<div id="InventoryWindow">
-				<div id="Inventory">
+				<div class="LeftPane">
 				<b><u>Inventory</u></b><br><br>
 				<table id="InventoryTable" style="width:100%; padding:5px">
 						<tr>
@@ -139,15 +139,195 @@
 						</tr>
 					</table>
 				</div>
+				<div class="RightPane">
+				<b><u>Upgrades</u></b><br><br>
+				<table id="UpgradesTable" style="width:100%; padding:5px">
+						<tr>
+							<th>Stone Dagger Upgrade</th>
+							<td><span id="stoneDaggerUpgradeCost">Cost</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th>Leather Hat Upgrade</th>
+							<td><span id="leatherHatUpgradeCost">Cost</span></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div id="BuildingsWindow">
-				Buildings Window
+				<div class="LeftPane">
+				<b><u>Your Buildings</u></b><br><br>
+				<table id="BuildingTable" style="width:100%; padding:5px">
+						<tr>
+							<th>Blacksmith</th>
+							<td><span id="blacksmithLevel">Level 1</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th>Tannery</th>
+							<td><span id="tanneryLevel">Level 1</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="MiddlePane">
+				<b><u>Upgrades</u></b><br><br>
+				<table id="BuildingUpgradesTable" style="width:100%; padding:5px">
+						<tr>
+							<th>Blacksmith Upgrade</th>
+							<td><span id="blacksmithUpgradeCost">Cost</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th>Tannery Upgrade</th>
+							<td><span id="tanneryUpgradeCost">Cost</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="RightPane">
+				<b><u>New Buildings</u></b><br><br>
+				<table id="NewBuildings" style="width:100%; padding:5px">
+						<tr>
+							<th>Mining Camp</th>
+							<td><span id="miningCampCost">Cost</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th>Mana Well</th>
+							<td><span id="manaWellCost">Cost</span></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div id="HeroesWindow">
-				Heroes Window
+				<div class="Hero1Pane">
+					<b><u><span id="hero_1_name">Hero 1 Name</span></u></b><br><br>
+					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+						<tr>
+							<th style="width: 50%">Weapon</th>
+							<td style="width: 50%"><span id="hero1Weapon">fists</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th style="width: 50%">Shield</th>
+							<td style="width: 50%"><span id="hero1Shield">fists</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Armor</th>
+							<td style="width: 50%"><span id="hero1Armor">clothes</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Item</th>
+							<td style="width: 50%"><span id="hero1Item">empty pocket</span></td>
+						</tr>
+					</table>
+				<div class="StatsPane">
+					<br><b><u>Stats</u></b><br><br>
+					<table id="hero1StatsTable" style="width:100%; padding:10px">
+						<tr>
+							<th style="width: 50%">Level</th>
+							<td style="width: 50%"><span id="hero1Level">1</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th style="width: 50%">Health</th>
+							<td style="width: 50%"><span id="hero1Health">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Mana</th>
+							<td style="width: 50%"><span id="hero1Mana">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Experience</th>
+							<td style="width: 50%"><span id="hero1Exp">0/100</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+				<div class="Hero2Pane">
+				<br>
+					<b><u><span id="hero_2_name">Hero 2 Name</span></u></b><br><br>
+					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+						<tr>
+							<th style="width: 50%">Weapon</th>
+							<td style="width: 50%"><span id="hero2Weapon">fists</span></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<th style="width: 50%">Shield</th>
+							<td style="width: 50%"><span id="hero2Shield">fists</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Armor</th>
+							<td style="width: 50%"><span id="hero2Armor">clothes</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Item</th>
+							<td style="width: 50%"><span id="hero2Item">empty pocket</span></td>
+						</tr>
+					</table>
+				<div class="StatsPane">
+					<br><b><u>Stats</u></b><br><br>
+					<table id="hero2StatsTable" style="width:100%; padding:10px">
+						<tr>
+							<th style="width: 50%">Level</th>
+							<td style="width: 50%"><span id="hero2Level">1</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Health</th>
+							<td style="width: 50%"><span id="hero2Health">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Mana</th>
+							<td style="width: 50%"><span id="hero2Mana">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Experience</th>
+							<td style="width: 50%"><span id="hero2Exp">0/100</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
 			</div>
 			<div id="PetsWindow">
-				Pets Window
+				<div class="Pet1Pane">
+					<b><u><span id="pet_1_name">Pet 1 Name</span></u></b><br><br>
+					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+						<tr>
+							<th style="width: 50%">Assigned To:</th>
+							<td style="width: 50%"><span id="pet1Hero">none</span></td>
+						</tr>
+					</table>
+				<div class="StatsPane">
+					<br><b><u>Stats</u></b><br><br>
+					<table id="pet1StatsTable" style="width:100%; padding:10px">
+						<tr>
+							<th style="width: 50%">Level</th>
+							<td style="width: 50%"><span id="pet1Level">1</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Health</th>
+							<td style="width: 50%"><span id="pet1Health">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Energy</th>
+							<td style="width: 50%"><span id="pet1Mana">100</span></td>
+						</tr>
+						<tr>
+							<th style="width: 50%">Experience</th>
+							<td style="width: 50%"><span id="pet1Exp">0/100</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="FoodPane">
+					<br><b><u>Food</u></b><br><br>
+					<table id="pet1FoodTable" style="width:100%; padding:10px">
+						<tr>
+							<th style="width: 50%">Food Type</th>
+							<td style="width: 50%"><button type="button">Feed</button></td>
+						</tr>
+					</table>
+				</div>
+				</div>
 			</div>
 			<div id="DungeonWindow">
 				Dungeon Window
