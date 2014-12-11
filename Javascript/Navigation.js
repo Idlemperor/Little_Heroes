@@ -1,7 +1,18 @@
+/*
+	This File Contains Functions For Handling Page Navigation
+	
+	Searching Index:
+		Core Display Function - f1
+*/
+
+// f1
+// This Function Handles Displaying Different Windows In The Interface
+// It Takes A Window Name As Input And Displays That For The User
 function display(window)
 {
-	if (window == 'Resources')
+	if (window == 'Resources') // Checks If Requested Window Is The Resources Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "inline";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -19,10 +30,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Inventory')
+	if (window == 'Inventory') // Checks If Requested Window Is The Inventory Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "inline";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -40,10 +53,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Buildings')
+	if (window == 'Buildings') // Checks If Requested Window Is The Buildings Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "inline";
@@ -61,10 +76,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Heroes')
+	if (window == 'Heroes') // Checks If Requested Window Is The Heroes Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -82,10 +99,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Pets')
+	if (window == 'Pets') // Checks If Requested Window Is The Pets Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -103,10 +122,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Dungeon')
+	if (window == 'Dungeon') // Checks If Requested Window Is The Dungeon Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -124,10 +145,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab-Selected";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Research')
+	if (window == 'Research') // Checks If Requested Window Is The Research Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -145,10 +168,12 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab-Selected";
 		document.getElementById('MarketTab').className = "SelectionTab";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 	
-	if (window == 'Market')
+	if (window == 'Market') // Checks If Requested Window Is The Market Window
 	{
+		//Everything Below Here Makes Changes To The User Interface
 		document.getElementById("ResourceWindow").style.display = "none";
 		document.getElementById("InventoryWindow").style.display = "none";
 		document.getElementById("BuildingsWindow").style.display = "none";
@@ -166,5 +191,40 @@ function display(window)
 		document.getElementById('DungeonTab').className = "SelectionTab";
 		document.getElementById('ResearchTab').className = "SelectionTab";
 		document.getElementById('MarketTab').className = "SelectionTab-Selected";
+		//Everything Above Here Makes Changes To The User Interface
 	};
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

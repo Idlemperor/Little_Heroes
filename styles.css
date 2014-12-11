@@ -1,0 +1,741 @@
+/*
+	This File Contains CSS For Various Parts Of The Page
+	
+	Searching Index:
+		HTML CSS 		   - c1
+		Options Menu CSS   - c2
+		Time Display CSS   - c3
+		Event Log CSS 	   - c4
+		Links Bar CSS	   - c5
+		Display Window CSS - c6
+		Selection Bar CSS  - c7
+		Resource Tab CSS   - c8
+		Inventory Tab CSS  - c9
+		Buildings Tab CSS  - c10
+		Heroes Tab CSS	   - c11
+		Pets Tab CSS	   - c12
+		Dungeon Tab CSS    - c13
+		Research Tab CSS   - c14
+		Market Tab CSS     - c15
+		Audio Player CSS   - c16
+		Resource Window CSS - c17
+		Other Windows CSS  - c18
+		Worker Assignments CSS - c19
+		Right Display Pane CSS - c20
+		Left Display Pane CSS  - c21
+		Middle Display Pane CSS - c22
+		Hero 1 Display Pane CSS - c23
+		Hero 2 Display Pane CSS - c24
+		Pet 1 Display Pane CSS - c25
+		Stats Display Pane CSS - c26
+		Pet Food Display Pane CSS - c27
+		Selection Tabs CSS - c28
+			Selected	   - c29
+		Dungeon Floor 1 CSS - c30
+		Dungeon Floor 2 CSS - c31
+		Button Design CSS - c32
+			Hover		  - c33
+			Active		  - c34
+		
+*/
+
+/* c1
+Contains CSS For The Entire Page */
+html
+{
+	background-image:url("Images/Backgrounds/page_background.png"); /*Sets The Background Image*/
+}
+
+/* c2
+Contains CSS For The Options Menu ID */
+#OptionsMenu
+{
+	/*Set Background Color And Opacity*/ 
+	background-color:#CCCCCC;
+	opacity:0.8;
+		
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:0%;
+		
+	/*Set The Size Of The Element*/
+	height:3%;
+	width:40%;
+		
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+		
+	/*Handle Text In The Element*/
+	text-align:center;
+}
+
+/* c3
+Contains CSS For The Time Display ID */
+#TimeDisplay
+{
+	/*Set Background Color And Opacity*/ 
+	background-color:#CCCCCC;
+	opacity:0.8;
+	
+	/*Position The Element*/
+	position:absolute;
+	left:40%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	height:3%;
+	width:40%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-right:none;
+	
+	/*Handle Text In The Element*/
+	text-align:center;
+}
+
+/* c4
+Contains CSS For The Event Log ID */
+#EventLog
+{
+	/*Set Background Color And Opacity*/ 
+	background-color:#CCCCCC;
+	opacity:0.8;
+	
+	/*Position The Element*/
+	position:absolute;
+	left:80%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:19.4%;
+	height:97%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	
+	/*Handle Text In The Element*/
+	text-align:center;
+}
+
+/* c5
+Contains CSS For The Links Bar ID */
+#LinksBar
+{
+	/*Set Background Color And Opacity*/ 
+	background-color:#CCCCCC;
+	opacity:0.8;
+	
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:94%;
+	
+	/*Set The Size Of The Element*/
+	height:3%;
+	width:79.9%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-right:none;
+	
+	/*Handle Text In The Element*/
+	text-align:center;
+}
+
+/* c6
+Contains CSS For The Display Window ID */
+#DisplayWindow
+{
+	/*Set Background Color And Opacity*/
+	background-color:#CCCCCC;
+	opacity:0.8;
+	
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:3.5%;
+	
+	/*Set The Size Of The Element*/
+	height:90.5%;
+	width:80%;
+	
+	/*Handle Text In The Element*/
+	text-align:center;
+	
+	/*Place The Element On A Layer*/
+	z-index: -1;
+}
+
+/* c7
+Contains CSS For The Selection Bar ID */
+#SelectionBar
+{
+	/*Set Background Color And Opacity*/
+	background-color:#666666;
+	opacity:1;
+	
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	height:3%;
+	width:100%;
+	
+	/*Handle Text In The Element*/
+	text-align:center;
+	font-size:130%;
+}
+
+/* c8
+Contains CSS For The Resources Tab ID */
+#ResourceTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+	
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c9
+Contains CSS For The Inventory Tab ID */
+#InventoryTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:12.5%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+	
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c10
+Contains CSS For The Buildings Tab ID */
+#BuildingsTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:25%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c11
+Contains CSS For The Heroes Tab ID */
+#HeroesTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:37.5%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c12
+Contains CSS For The Pets Tab ID */
+#PetsTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:50%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c13
+Contains CSS For The Dungeon Tab ID */
+#DungeonTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:62.5%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c14
+Contains CSS For The Research Tab ID */
+#ResearchTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:75%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c15
+Contains CSS For The Market Tab ID */
+#MarketTab
+{
+	/*Position The Element*/
+	position:absolute;
+	left:87.5%;
+	top:0%;
+	
+	/*Set The Size Of The Element*/
+	width:12.5%;
+	height:100%;
+
+	/*Handle The Cursor In The Element*/
+	cursor:pointer;
+	
+	/*Place The Element On A Layer*/
+	z-index: 1;
+}
+
+/* c16
+Contains CSS For The Audio Player ID */
+#Audio
+{
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:94.3%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-top:none;
+	
+	/*Place The Element On A Layer*/
+	z-index:1;
+}
+
+/* c17
+Contains CSS For The Resource Window ID */
+#ResourceWindow
+{	
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:4%;
+	
+	/*Set Display Setting For The Element*/
+	display:inline;
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+	height:97%;
+	
+	/*Place The Element On A Layer*/
+	z-index:3;
+}
+
+/* c18
+Contains CSS For The Other Window ID's */
+#InventoryWindow, #BuildingsWindow, #HeroesWindow, #PetsWindow, #DungeonWindow, #ResearchWindow, #MarketWindow
+{	
+	/*Position The Element*/
+	position:absolute;
+	left:0%;
+	top:4%;
+	
+	/*Set Display Setting For The Element*/
+	display:none;
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+	height:97%;
+	
+	/*Place The Element On A Layer*/
+	z-index:3;
+}
+
+/* c19
+Contains CSS For The Worker Assignments Pane ID */
+#WorkerAssignments
+{
+	/*Position The Element*/
+	position:absolute;
+	top:8%;
+	right:0%;	
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+}
+
+/* c20
+Contains CSS For The Right Display Pane Class*/
+.RightPane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	right:0%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-right:none;
+	border-left:none;
+	border-bottom:none;	
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+}
+
+/* c21
+Contains CSS For The Left Display Pane Class*/
+.LeftPane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	left:0%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-right:none;
+	border-left:none;
+	border-bottom:none;	
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+}
+
+/* c22
+Contains CSS For The Middle Display Pane Class*/
+.MiddlePane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	left:40%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-right:none;
+	border-left:none;
+	border-bottom:none;	
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+}
+
+/* c23
+Contains CSS For The First Hero Display Pane Class*/
+.Hero1Pane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	left:0%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+	height:45%;
+}
+
+/* c24
+Contains CSS For The Second Hero Display Pane Class*/
+.Hero2Pane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:48%;
+	left:0%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+	border-top:none;
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+	height:45%;
+}
+
+/* c25
+Contains CSS For The First Pet Display Pane Class*/
+.Pet1Pane
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	left:0%;	
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+	
+	/*Set The Size Of The Element*/
+	width:20%;
+	height:45%;
+}
+
+/* c26
+Contains CSS For The Stats Display Pane Class*/
+.StatsPane
+{
+	/*Position The Element*/
+	position:relative;
+	top:0%;
+	left:0%;		
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+}
+
+/* c27
+Contains CSS For The Pet Food Display Pane Class*/
+.PetFoodPane
+{
+	/*Position The Element*/
+	position:relative;
+	top:0%;
+	left:0%;		
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+}
+
+/* c28
+Contains CSS For The Selection Tabs Class*/
+.SelectionTab
+{
+	/*Create A Border Around The Element*/
+	border: 3px solid transparent;
+	border-color:brown;
+	border-top:none;
+	border-left:none;
+}
+
+/* c29
+Contains CSS For The Selection Tabs When Selected Class*/
+.SelectionTab-Selected
+{
+	/*Create A Border Around The Element*/
+	border: 3px solid transparent;
+	border-color:brown;
+	border-top:none;
+	border-left:none;
+	border-bottom:none;
+}
+
+/* c30
+Contains CSS For The First Dungeon Floor Class*/
+.DungeonFloor1
+{
+	/*Position The Element*/
+	position:absolute;
+	top:3%;
+	left:0%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+	border-right:none;
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+	height:10%
+}
+
+/* c31
+Contains CSS For The Second Dungeon Floor Class*/
+.DungeonFloor2
+{
+	/*Position The Element*/
+	position:absolute;
+	top:13%;
+	left:0%;
+	
+	/*Create A Border Around The Element*/
+	border:3px solid transparent;
+	border-color:brown;
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	
+	/*Set The Size Of The Element*/
+	width:100%;
+	height:10%
+}
+
+/* c32
+Contains CSS For The Button Design Class
+Created At http://css-tricks.com/examples/ButtonMaker/   */
+.Button 
+{
+	border-top: 1px solid #96d1f8;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	padding: 5px 10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: #000000;
+	font-size: 14px;
+	font-family: Georgia, Serif;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+/* c33
+Contains CSS For The Button Design When Hovered Over Class
+Created At http://css-tricks.com/examples/ButtonMaker/   */
+.Button:hover 
+{
+	border-top-color: #28597a;
+	background: #28597a;
+	color: #ccc;
+}
+
+/* c34
+Contains CSS For The Button Design When Active Class
+Created At http://css-tricks.com/examples/ButtonMaker/   */
+.Button:active
+{
+	border-top-color: #1b435e;
+	background: #1b435e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

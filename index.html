@@ -1,38 +1,73 @@
+<!--This File Contains All Of The HTML For The Page
+
+    Searching Index:
+		Head Of The Page 		- h1
+		Page Title 				- h2
+		Body Of The Page 		- h3
+		Audio Controls			- h4
+		Options Menu			- h5
+		Time Display 			- h6
+		Event Log 				- h7
+		Links Bar 				- h8
+		Display Window			- h9
+			Selection Bar		- h10
+			Resource Window		- h11
+			Inventory Window	- h12
+			Buildings Window	- h13
+			Heroes Window		- h14
+			Pets Window			- h15
+			Dungeons Window		- h16
+			Research Window		- h17
+			Market Window		- h18
+		JavaScript Links		- h19
+-->
+
 <!DOCTYPE html>
 <html>
+
+	<!--h1-Contains All Of The Head Elements For The Page-->
 	<head>
-		<link rel="stylesheet" type="text/css" href="little_heroes.css" />
-		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" /> <!--Attach The StyleSheet To This Page-->
+		<meta charset="UTF-8"> <!--Set UTF-8 As The Character Set Used For This Page-->
 		
-		<title>Little Heroes Project Page</title>
+		<!--h2-Contains The Title For The Page-->
+		<title>Little Heroes Project Page</title> <!--Set The Page Title-->
 	</head>
-	
+
+	<!--h3-Contains All Of The Body Elements For The Page-->
 	<body>
-		<audio controls loop id="Audio">
-			<source src="Sounds/background_music.mp3" type="audio/mpeg">
+	
+		<!--h4-Contains The Audio Control Element-->
+		<audio autoplay controls loop id="Audio"> <!--Set The Audio To Auto Play And Loop-->
+			<source src="Sounds/background_music.mp3" type="audio/mpeg"> <!--Point To The Audio File-->
 			If you see this, your browser does not support this audio element.
 		</audio>
-	
-		<div class="Container" id="OptionsMenu">
+		
+		<!--h5-Contains The Elements That Make Up The Options Menu-->
+		<div id="OptionsMenu">
 			<u>Options Menu</u> ---
-			<button type="button" onClick="save()">Save Game</button>
-			<button type="button" onClick="load()">Load Game</button>
-			<button type="button" onClick="deleteSave()">Delete Game</button>
+			<button type="button" onClick="saveGame()">Save Game</button> <!--Create Button For Saving The Game-->
+			<button type="button" onClick="loadGame()">Load Game</button> <!--Create Button For Loading The Game-->
+			<button type="button" onClick="deleteGame()">Delete Game</button> <!--Create Button For Deleting The Save-->
 		</div>
-		<div class="Container" id="ClockDisplay">
-			<b>Year <span id="year">1</span> / Month <span id="month">1</span> / Week <span id="week">1</span> / Day <span id="day">1</span> - <span id="season">Spring</span></b>
+		
+		<!--h6-Contains The Elements That Make Up The Time Display-->
+		<div id="TimeDisplay">
+			<b>Year <span id="year">1</span> / Month <span id="month">1</span> / Week <span id="week">1</span> / Day <span id="day">1</span> - <span id="season">Spring</span></b> <!--Display The Date & Season-->
 		</div>
-		<div class="Container" id="EventLog">
-			<b><u>Event Log</u></b> <br><br>
-			<b><span id="event1"></span></b> <br><br>
-			<span id="event2"></span> <br><br>
-			<span id="event3"></span> <br><br>
-			<span id="event4"></span> <br><br>
-			<span id="event5"></span> <br><br>
-			<span id="event6"></span> <br><br>
-			<span id="event7"></span> <br><br>
-			<span id="event8"></span> <br><br>
-			<span id="event9"></span> <br><br>
+		
+		<!--h7-Contains The Elements That Make Up The Event Log-->
+		<div id="EventLog">
+			<b><u>Event Log</u></b> <br><br> <!--All Below Lines Contain A Single Event. 22 Event Can Be Kept In The Log At A Time.-->
+			<b><span id="event1"></span></b> <br><br> 
+			<span id="event2"> </span> <br><br>
+			<span id="event3"> </span> <br><br>
+			<span id="event4"> </span> <br><br>
+			<span id="event5"> </span> <br><br>
+			<span id="event6"> </span> <br><br>
+			<span id="event7"> </span> <br><br>
+			<span id="event8"> </span> <br><br>
+			<span id="event9"> </span> <br><br>
 			<span id="event10"></span> <br><br>
 			<span id="event11"></span> <br><br>
 			<span id="event12"></span> <br><br>
@@ -47,13 +82,18 @@
 			<span id="event21"></span> <br><br>
 			<span id="event22"></span> <br><br>
 		</div>
-		<div class="Container" id="LinksBar">
+		
+		<!--h8-Contains The Elements That Make Up The Links Bar-->
+		<div id="LinksBar"> <!--Code Below Was Provided By Twitter To Embed A Follow Link-->
 			<a href="https://twitter.com/KhyruKats" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @KhyruKats</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		</div>
+			
+		<!--h9-Contains The Elements That Make Up The Display Window-->
+		<div id="DisplayWindow">
 		
-		<div class="Container" id="DisplayWindow">			
-			<div id="SelectionBar">
+			<!--h10-Contains The Elements That Make Up The Selection Bar-->
+			<div id="SelectionBar"> <!--Each Div Below Is A Different Tab In The Display Window-->
 				<div class="SelectionTab-Selected" id="ResourceTab" onClick="display('Resources')">
 					Resources
 				</div>
@@ -78,13 +118,14 @@
 				<div class="SelectionTab" id="MarketTab" onClick="display('Market')">
 					Market
 				</div>
-			</div>	
-
+			</div>
+			
+			<!--h11-Contains The Elements That Make Up The Resources Window-->
 			<div id="ResourceWindow">
 				<div class="LeftPane">
 					<b><u>Resources</u></b><br><br>
-					<table id="ResourceTable" style="width:100%; padding:5px">
-						<tr>
+					<table style="width:100%; padding:5px">
+						<tr> <!--Table Below Holds Information On Current Resource Amounts And Income Rates-->
 							<td><img src="Images/Icons/gold_icon.png" alt="Gold Resource" style="width:20px;height:20px"></td>
 							<th>Gold</th>
 							<td><span id="gold">100</span></td>
@@ -105,14 +146,14 @@
 					</table>
 				</div>
 				
-				<div class="RightPane">
+				<div class="RightPane"> <!--Contains A Button That Hires A Worker When Clicked, Also Shows Available Worker Stats-->
 					<button class="Button" type="button" onClick="hire('worker')">Hire a Worker - 10 Gold</button>
 					<br><br><b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
 				</div>
 				
 				<div id="WorkerAssignments">
-					<br><br>
-					<table id="ResourceTable" style="width:100%; padding:5px">
+					<br><br> <!--Table Below Hold Information On Available Jobs And Where Workers Are Assigned-->
+					<table style="width:100%; padding:5px">
 						<tr>
 							<th>Lumberjacks</th>
 							<td><span id="lumberjacks">0</span></td>
@@ -129,10 +170,12 @@
 					</table>
 				</div>
 			</div>
+			
+			<!--h12-Contains The Elements That Make Up The Inventory Window-->
 			<div id="InventoryWindow">
 				<div class="LeftPane">
 				<b><u>Inventory</u></b><br><br>
-				<table id="InventoryTable" style="width:100%; padding:5px">
+				<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Current Items In Inventory-->
 						<tr>
 							<td>Icon</td>
 							<th>Stone Dagger</th>
@@ -144,70 +187,57 @@
 				</div>
 				<div class="MiddlePane">
 				<b><u>Crafting</u></b><br><br>
-				<table id="CraftingTable" style="width:100%; padding:5px">
+					<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Current Craftable Items-->
 						<tr>
 							<td><button class="Button" type="button" onClick="craft('stoneDagger')">Craft a Stone Dagger - 5 Stone & 5 Wood</button></td>
 						</tr>
-						<tr></tr>
 					</table>
 				</div>
 				<div class="RightPane">
-				<b><u>Upgrades</u></b><br><br>
-				<table id="UpgradesTable" style="width:100%; padding:5px">
+					<b><u>Upgrades</u></b><br><br>
+					<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Currently Available Item Upgrades-->
 						<tr>
 							<th>Sharper Blade</th>
 							<td><span id="stoneDaggerUpgradeCost">10 Gold</span></td>
 						</tr>
-						<tr></tr>
 					</table>
 				</div>
 			</div>
+			
+			<!--h13-Contains The Elements That Make Up The Buildings Window-->
 			<div id="BuildingsWindow">
 				<div class="LeftPane">
-				<b><u>Your Buildings</u></b><br><br>
-				<table id="BuildingTable" style="width:100%; padding:5px">
-						<tr>
-							<th>Blacksmith</th>
-							<td><span id="blacksmithLevel">Level 1</span></td>
-						</tr>
-						<tr></tr>
-						<tr>
-							<th>Tannery</th>
-							<td><span id="tanneryLevel">Level 1</span></td>
+					<b><u>Your Buildings</u></b><br><br>
+					<table style="width:100%; padding:5px">
+						<tr> <!--Table Contains Currently Owned Buildings-->
+							<th>Building</th>
+							<td>Level <span id="Level">1</span></td>
 						</tr>
 					</table>
 				</div>
 				<div class="MiddlePane">
-				<b><u>Upgrades</u></b><br><br>
-				<table id="BuildingUpgradesTable" style="width:100%; padding:5px">
-						<tr>
-							<th>Blacksmith Upgrade</th>
-							<td><span id="blacksmithUpgradeCost">Cost</span></td>
-						</tr>
-						<tr></tr>
-						<tr>
-							<th>Tannery Upgrade</th>
-							<td><span id="tanneryUpgradeCost">Cost</span></td>
+					<b><u>Upgrades</u></b><br><br>
+					<table style="width:100%; padding:5px">
+						<tr> <!--Table Contains Currently Available Building Upgrades-->
+							<th>Upgrade</th>
+							<td><span id="Cost">Cost</span></td>
 						</tr>
 					</table>
 				</div>
 				<div class="RightPane">
-				<b><u>New Buildings</u></b><br><br>
-				<table id="NewBuildings" style="width:100%; padding:5px">
-						<tr>
-							<th>Mining Camp</th>
-							<td><span id="miningCampCost">Cost</span></td>
-						</tr>
-						<tr></tr>
-						<tr>
-							<th>Mana Well</th>
-							<td><span id="manaWellCost">Cost</span></td>
+					<b><u>New Buildings</u></b><br><br>
+					<table style="width:100%; padding:5px">
+						<tr> <!--Table Contains Currently Available Buildings-->
+							<th>Building</th>
+							<td><span id="Cost">Cost</span></td>
 						</tr>
 					</table>
 				</div>
 			</div>
+			
+			<!--h14-Contains The Elements That Make Up The Heroes Window-->
 			<div id="HeroesWindow">
-				<div class="Hero1Pane">
+				<div class="Hero1Pane"> <!--This Div Contains Information On Hero 1-->
 					<b><u><span id="hero_1_name">Hero 1 Name</span></u></b><br><br>
 					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
 						<tr>
@@ -251,7 +281,7 @@
 					</table>
 				</div>
 			</div>
-				<div class="Hero2Pane">
+				<div class="Hero2Pane"> <!--This Div Contains Information On Hero 2-->
 				<br>
 					<b><u><span id="hero_2_name">Hero 2 Name</span></u></b><br><br>
 					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
@@ -294,10 +324,12 @@
 						</tr>
 					</table>
 				</div>
+				</div>
 			</div>
-			</div>
+			
+			<!--h15-Contains The Elements That Make Up The Pets Window-->
 			<div id="PetsWindow">
-				<div class="Pet1Pane">
+				<div class="Pet1Pane"> <!--This Div Contains Information On Pet 1-->
 					<b><u><span id="pet_1_name">Pet 1 Name</span></u></b><br><br>
 					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
 						<tr>
@@ -337,8 +369,10 @@
 				</div>
 				</div>
 			</div>
+			
+			<!--h16-Contains The Elements That Make Up The Dungeon Window-->
 			<div id="DungeonWindow">
-				<div class="DungeonFloor1">
+				<div class="DungeonFloor1"> <!--This Div Contains Information On Dungeon Floor 1-->
 					<table style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
 						<tr>
 							<th style="width: 50%">Floor One</th>
@@ -347,7 +381,8 @@
 						</tr>
 					</table>
 				</div>
-				<div class="DungeonFloor2">
+				
+				<div class="DungeonFloor2"> <!--This Div Contains Information On Dungeon Floor 2-->
 					<table style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
 						<tr>
 							<th style="width: 50%">Floor Two</th>
@@ -357,8 +392,10 @@
 					</table>
 				</div>
 			</div>
+			
+			<!--h17-Contains The Elements That Make Up The Research Window-->
 			<div id="ResearchWindow">
-				<div class="LeftPane">
+				<div class="LeftPane"> <!--This Div Contains Information On Already Researched Technology-->
 					<b>Researched</b>
 					<table style="width:100%; padding: 10px">
 						<tr>
@@ -369,7 +406,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="RightPane">
+				<div class="RightPane"> <!--This Div Contains Information On Available Research-->
 					<b>Available Research</b>
 					<table style="width:100%; padding: 10px">
 						<tr>
@@ -381,8 +418,10 @@
 					</table>
 				</div>
 			</div>
+			
+			<!--h18-Contains The Elements That Make Up The Market Window-->
 			<div id="MarketWindow">
-				<div class="LeftPane">
+				<div class="LeftPane"> <!--This Div Contains Information On Selling Resources-->
 					<b>Sell Resources</b>
 					<table style="width:100%; padding: 10px">
 						<tr>
@@ -392,7 +431,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="MiddlePane">
+				<div class="MiddlePane"> <!--This Div Contains Information On Buying Resources-->
 					<b>Buy Resources</b>
 					<table style="width:100%; padding: 10px">
 						<tr>
@@ -402,7 +441,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="RightPane">
+				<div class="RightPane"> <!--This Div Contains Information On Buying Special Imports-->
 					<b>Special Imports</b>
 					<table style="width:100%; padding: 10px">
 						<tr>
@@ -413,11 +452,74 @@
 					</table>
 				</div>
 			</div>
-		</div>
+		</div>	
 		
+		<!--h19-Links The Javascript Files To This Page-->
 		<script src="Javascript/core.js"></script>
 		<script src="Javascript/crafting.js"></script>
 		<script src="Javascript/workers.js"></script>
 		<script src="Javascript/navigation.js"></script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
