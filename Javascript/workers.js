@@ -78,7 +78,7 @@ function fire(job)
 	
 	if (job == "miner") // Checks To See If Input Job Was A Miner
 	{
-		if (freeWorkers >= 1) // Checks That The Player Has Miners
+		if (miners >= 1) // Checks That The Player Has Miners
 		{
 			freeWorkers = freeWorkers + 1; // Adds A Worker To The Available Pool
 			miners = miners - 1; // Removes A Worker From The Miner Pool

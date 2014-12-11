@@ -2,7 +2,8 @@
 	This File Contains Functions For Handling Crafting
 	
 	Searching Index:
-		Core Crafting Function - f1
+		Core Crafting Function 	- f1
+		Core Upgrading Function - f2
 */
 
 // f1
@@ -29,3 +30,38 @@ function craft(item)
 		};
 	};
 };
+
+// f2
+// This Is The Core Upgrading Function. It Takes An Item Name As Input
+// Checks If The Player Has Required Resources And Upgrades Item
+function upgrade(item)
+{
+	if (item == "stoneDagger") // Checks To See If Input Item Was Stone Dagger
+	{
+		if (stoneDaggerUpgrade == "Sharper Blade") // Checks To See If The Next Upgrade Is Sharper Blade
+		{
+			if (stoneAmount >= 10) // Checks To See If The Player Has Required Stone Amount
+			{
+				stoneAmount = stoneAmount - 10; // Removes Stone Cost From Stone Amount
+				stoneDaggerValue = 4; // Increase Value Of Stone Daggers
+				stoneDaggerUpgrade = "Reinforced Handle"; // Move To Next Upgrade Tier
+				
+				//Everything Below Here Writes The Changes Made Above To The User Interface
+				document.getElementById("stoneAmount").innerHTML = stoneAmount;
+				document.getElementById("stoneDaggerValue").innerHTML = stoneDaggerValue;
+				document.getElementById("stoneDaggerUpgrade").innerHTML = stoneDaggerUpgrade;
+				document.getElementById("stoneDaggerUpgradeCost").innerHTML = " 20 Wood";
+				//Everything Above Here Writes The Changes Made Above To The User Interface
+			};
+		};
+	};
+};
+
+
+
+
+
+
+
+
+

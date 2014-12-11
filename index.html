@@ -38,7 +38,7 @@
 	<body>
 	
 		<!--h4-Contains The Audio Control Element-->
-		<audio autoplay controls loop id="Audio"> <!--Set The Audio To Auto Play And Loop-->
+		<audio controls loop id="Audio"> <!--Set The Audio To Auto Play And Loop-->
 			<source src="Sounds/background_music.mp3" type="audio/mpeg"> <!--Point To The Audio File-->
 			If you see this, your browser does not support this audio element.
 		</audio>
@@ -128,19 +128,19 @@
 						<tr> <!--Table Below Holds Information On Current Resource Amounts And Income Rates-->
 							<td><img src="Images/Icons/gold_icon.png" alt="Gold Resource" style="width:20px;height:20px"></td>
 							<th>Gold</th>
-							<td><span id="gold">100</span></td>
+							<td><span id="goldAmount">50</span></td>
 						</tr>
 						<tr>
 							<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
 							<th>Wood</th>
-							<td><span id="wood">0</span></td>
+							<td><span id="woodAmount">0</span></td>
 							<td>(+ <span id="woodPer">0</span> )</td>
 						</tr>
 						<tr></tr>
 						<tr>
 							<td><img src="Images/Icons/stone_icon.png" alt="Stone Resource" style="width:20px;height:20px"></td>
 							<th>Stone</th>
-							<td><span id="stone">0</span></td>
+							<td><span id="stoneAmount">0</span></td>
 							<td>(+ <span id="stonePer">0</span> )</td>
 						</tr>
 					</table>
@@ -180,7 +180,7 @@
 							<td>Icon</td>
 							<th>Stone Dagger</th>
 							<td><span id="stoneDaggers">0</span></td>
-							<td><b>Value</b></td>
+							<td><b>Sells For <span id="stoneDaggerValue">2</span> Gold</b></td>
 						</tr>
 						<tr></tr>
 					</table>
@@ -197,8 +197,7 @@
 					<b><u>Upgrades</u></b><br><br>
 					<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Currently Available Item Upgrades-->
 						<tr>
-							<th>Sharper Blade</th>
-							<td><span id="stoneDaggerUpgradeCost">10 Gold</span></td>
+							<td><button class="Button" type="button" onClick="upgrade('stoneDagger')"><span id="stoneDaggerUpgrade">Sharper Blade</span><span id="stoneDaggerUpgradeCost">- 10 Stone</span></button></td>
 						</tr>
 					</table>
 				</div>

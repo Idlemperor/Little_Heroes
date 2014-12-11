@@ -49,6 +49,8 @@ var stoneAmount = 0; // Number Of Stone The Player Has
 // v5
 // This Section Contains Variables Relating To Items
 var stoneDaggers = 0; // Number Of Stone Daggers The Player Has
+var stoneDaggerUpgrade = "Sharper Blade"; //Next Upgrade For Stone Dagger
+var stoneDaggerValue = 2; //Current Value Of A Stone Dagger In Gold
 
 // f1
 // This Function Handles Saving The Game
@@ -276,7 +278,7 @@ window.setInterval(function()
 // Mostly Just Used As An AutoSave Feature
 window.setInterval(function()
 {
-	save(); // Executes The Function To Save The Game
+	saveGame(); // Executes The Function To Save The Game
 }, 120000); 
 
 
