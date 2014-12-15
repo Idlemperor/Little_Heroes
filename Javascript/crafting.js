@@ -1,5 +1,6 @@
 /*
 	This File Contains Functions For Handling Crafting
+	*May Be Out Of Order, Index Will Eventually Be Updated And Organized*
 	
 	Searching Index:
 		Core Crafting Function 	- f1
@@ -25,6 +26,8 @@ function craft(item)
 				document.getElementById("woodAmount").innerHTML = woodAmount;
 				document.getElementById("stoneAmount").innerHTML = stoneAmount;
 				document.getElementById("stoneDaggers").innerHTML = stoneDaggers;
+				
+				writeEvent("Crafted A Stone Dagger.");
 				//Everything Above Here Writes The Changes Made Above To The User Interface				
 			};
 		};
@@ -51,6 +54,8 @@ function upgrade(item)
 				document.getElementById("stoneDaggerValue").innerHTML = stoneDaggerValue;
 				document.getElementById("stoneDaggerUpgrade").innerHTML = stoneDaggerUpgrade;
 				document.getElementById("stoneDaggerUpgradeCost").innerHTML = " 20 Wood";
+				
+				writeEvent("Upgraded Stone Dagger Quality.")
 				//Everything Above Here Writes The Changes Made Above To The User Interface
 			};
 		};

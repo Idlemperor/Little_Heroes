@@ -1,5 +1,6 @@
 /*
 	This File Contains Functions For Handling The Hiring And Assigning Of Workers
+	*May Be Out Of Order, Index Will Eventually Be Updated And Organized*
 	
 	Searching Index:
 		Core Hiring Function - f1

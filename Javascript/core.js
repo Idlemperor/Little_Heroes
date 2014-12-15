@@ -1,5 +1,6 @@
 /*
 	This File Contains Functions For Handling The Game Loops And Variables
+	*May Be Out Of Order, Index Will Eventually Be Updated And Organized*
 	
 	Searching Index:
 		Global Variables - v1
@@ -7,6 +8,7 @@
 			Job Related Variables - v3
 			Resource Related Variables - v4
 			Item Related Variables - v5
+			Building Related Variables - v6
 		------------------------------------------
 		Save Game Function - f1
 		Load Game Function - f2
@@ -51,6 +53,14 @@ var stoneAmount = 0; // Number Of Stone The Player Has
 var stoneDaggers = 0; // Number Of Stone Daggers The Player Has
 var stoneDaggerUpgrade = "Sharper Blade"; //Next Upgrade For Stone Dagger
 var stoneDaggerValue = 2; //Current Value Of A Stone Dagger In Gold
+
+// v6
+// This Section Contains Variables Relating To Buildings
+var loggingCampLevel = 1; // Current Logging Camp Level
+var loggingCampUpgrade = "Stone Tools"; // Next Upgrade For Logging Camp
+var miningCampLevel = 1; // Current Mining Camp Level
+var miningCampUpgrade = "Stone Tools"; // Next Upgrade For Mining Camp
+
 
 // f1
 // This Function Handles Saving The Game
@@ -196,21 +206,6 @@ function writeEvent(event)
 	var oldEvent4 = document.getElementById('event4').innerHTML;
 	var oldEvent5 = document.getElementById('event5').innerHTML;
 	var oldEvent6 = document.getElementById('event6').innerHTML;
-	var oldEvent7 = document.getElementById('event7').innerHTML;
-	var oldEvent8 = document.getElementById('event8').innerHTML;
-	var oldEvent9 = document.getElementById('event9').innerHTML;
-	var oldEvent10 = document.getElementById('event10').innerHTML;
-	var oldEvent11 = document.getElementById('event11').innerHTML;
-	var oldEvent12 = document.getElementById('event12').innerHTML;
-	var oldEvent13 = document.getElementById('event13').innerHTML;
-	var oldEvent14 = document.getElementById('event14').innerHTML;
-	var oldEvent15 = document.getElementById('event15').innerHTML;
-	var oldEvent16 = document.getElementById('event16').innerHTML;
-	var oldEvent17 = document.getElementById('event17').innerHTML;
-	var oldEvent18 = document.getElementById('event18').innerHTML;
-	var oldEvent19 = document.getElementById('event19').innerHTML;
-	var oldEvent20 = document.getElementById('event20').innerHTML;
-	var oldEvent21 = document.getElementById('event21').innerHTML;
 	
 	// Code Below Writes New Event At The Top And Moves All Old Events Down 1 Row
 	document.getElementById('event1').innerHTML = event;
@@ -219,22 +214,6 @@ function writeEvent(event)
 	document.getElementById('event4').innerHTML = oldEvent3;
 	document.getElementById('event5').innerHTML = oldEvent4;
 	document.getElementById('event6').innerHTML = oldEvent5;
-	document.getElementById('event7').innerHTML = oldEvent6;
-	document.getElementById('event8').innerHTML = oldEvent7;
-	document.getElementById('event9').innerHTML = oldEvent8;
-	document.getElementById('event10').innerHTML = oldEvent9;
-	document.getElementById('event11').innerHTML = oldEvent10;
-	document.getElementById('event12').innerHTML = oldEvent11;
-	document.getElementById('event13').innerHTML = oldEvent12;
-	document.getElementById('event14').innerHTML = oldEvent13;
-	document.getElementById('event15').innerHTML = oldEvent14;
-	document.getElementById('event16').innerHTML = oldEvent15;
-	document.getElementById('event17').innerHTML = oldEvent16;
-	document.getElementById('event18').innerHTML = oldEvent17;
-	document.getElementById('event19').innerHTML = oldEvent18;
-	document.getElementById('event20').innerHTML = oldEvent19;
-	document.getElementById('event21').innerHTML = oldEvent20;
-	document.getElementById('event22').innerHTML = oldEvent21;
 };
 
 // f6

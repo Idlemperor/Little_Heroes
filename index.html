@@ -1,5 +1,6 @@
 <!--This File Contains All Of The HTML For The Page
-
+	*May Be Out Of Order, Index Will Eventually Be Updated And Organized*
+	
     Searching Index:
 		Head Of The Page 		- h1
 		Page Title 				- h2
@@ -7,11 +8,12 @@
 		Audio Controls			- h4
 		Options Menu			- h5
 		Time Display 			- h6
+		Resource Display		- h20
 		Event Log 				- h7
 		Links Bar 				- h8
 		Display Window			- h9
 			Selection Bar		- h10
-			Resource Window		- h11
+			Workers Window		- h11
 			Inventory Window	- h12
 			Buildings Window	- h13
 			Heroes Window		- h14
@@ -56,31 +58,40 @@
 			<b>Year <span id="year">1</span> / Month <span id="month">1</span> / Week <span id="week">1</span> / Day <span id="day">1</span> - <span id="season">Spring</span></b> <!--Display The Date & Season-->
 		</div>
 		
+		<!--h20-Contains The Elements That Make Up The Resource Display-->
+		<div id="ResourceDisplay">
+			<b><u>Resources</u></b><br><br>
+				<table style="width:100%; padding:5px">
+					<tr> <!--Table Below Holds Information On Current Resource Amounts And Income Rates-->
+						<td><img src="Images/Icons/gold_icon.png" alt="Gold Resource" style="width:20px;height:20px"></td>
+						<th>Gold</th>
+						<td><span id="goldAmount">50</span></td>
+					</tr>
+					<tr>
+						<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
+						<th>Wood</th>
+						<td><span id="woodAmount">0</span></td>
+						<td>(+ <span id="woodPer">0</span> )</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td><img src="Images/Icons/stone_icon.png" alt="Stone Resource" style="width:20px;height:20px"></td>
+						<th>Stone</th>
+						<td><span id="stoneAmount">0</span></td>
+						<td>(+ <span id="stonePer">0</span> )</td>
+					</tr>
+				</table>
+		</div>
+		
 		<!--h7-Contains The Elements That Make Up The Event Log-->
 		<div id="EventLog">
-			<b><u>Event Log</u></b> <br><br> <!--All Below Lines Contain A Single Event. 22 Event Can Be Kept In The Log At A Time.-->
+			<b><u>Event Log</u></b> <br><br> <!--Each Below Line Contains A Single Event. 6 Events Can Be Kept In The Log At A Time.-->
 			<b><span id="event1"></span></b> <br><br> 
 			<span id="event2"> </span> <br><br>
 			<span id="event3"> </span> <br><br>
 			<span id="event4"> </span> <br><br>
 			<span id="event5"> </span> <br><br>
 			<span id="event6"> </span> <br><br>
-			<span id="event7"> </span> <br><br>
-			<span id="event8"> </span> <br><br>
-			<span id="event9"> </span> <br><br>
-			<span id="event10"></span> <br><br>
-			<span id="event11"></span> <br><br>
-			<span id="event12"></span> <br><br>
-			<span id="event13"></span> <br><br>
-			<span id="event14"></span> <br><br>
-			<span id="event15"></span> <br><br>
-			<span id="event16"></span> <br><br>
-			<span id="event17"></span> <br><br>
-			<span id="event18"></span> <br><br>
-			<span id="event19"></span> <br><br>
-			<span id="event20"></span> <br><br>
-			<span id="event21"></span> <br><br>
-			<span id="event22"></span> <br><br>
 		</div>
 		
 		<!--h8-Contains The Elements That Make Up The Links Bar-->
@@ -94,8 +105,8 @@
 		
 			<!--h10-Contains The Elements That Make Up The Selection Bar-->
 			<div id="SelectionBar"> <!--Each Div Below Is A Different Tab In The Display Window-->
-				<div class="SelectionTab-Selected" id="ResourceTab" onClick="display('Resources')">
-					Resources
+				<div class="SelectionTab-Selected" id="WorkersTab" onClick="display('Workers')">
+					Workers
 				</div>
 				<div class="SelectionTab" id="InventoryTab" onClick="display('Inventory')">
 					Inventory
@@ -121,32 +132,8 @@
 			</div>
 			
 			<!--h11-Contains The Elements That Make Up The Resources Window-->
-			<div id="ResourceWindow">
-				<div class="LeftPane">
-					<b><u>Resources</u></b><br><br>
-					<table style="width:100%; padding:5px">
-						<tr> <!--Table Below Holds Information On Current Resource Amounts And Income Rates-->
-							<td><img src="Images/Icons/gold_icon.png" alt="Gold Resource" style="width:20px;height:20px"></td>
-							<th>Gold</th>
-							<td><span id="goldAmount">50</span></td>
-						</tr>
-						<tr>
-							<td><img src="Images/Icons/wood_icon.png" alt="Wood Resource" style="width:20px;height:20px"></td>
-							<th>Wood</th>
-							<td><span id="woodAmount">0</span></td>
-							<td>(+ <span id="woodPer">0</span> )</td>
-						</tr>
-						<tr></tr>
-						<tr>
-							<td><img src="Images/Icons/stone_icon.png" alt="Stone Resource" style="width:20px;height:20px"></td>
-							<th>Stone</th>
-							<td><span id="stoneAmount">0</span></td>
-							<td>(+ <span id="stonePer">0</span> )</td>
-						</tr>
-					</table>
-				</div>
-				
-				<div class="RightPane"> <!--Contains A Button That Hires A Worker When Clicked, Also Shows Available Worker Stats-->
+			<div id="WorkersWindow">				
+				<div class="LeftPane"> <!--Contains A Button That Hires A Worker When Clicked, Also Shows Available Worker Stats-->
 					<button class="Button" type="button" onClick="hire('worker')">Hire a Worker - 10 Gold</button>
 					<br><br><b><u>Available Workers - <span id="freeWorkers">0</span> / <span id="totalWorkers">0</span></u></b>
 				</div>
@@ -177,17 +164,25 @@
 				<b><u>Inventory</u></b><br><br>
 				<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Current Items In Inventory-->
 						<tr>
+							<th>Icon</th>
+							<th>Item</th>
+							<th>Quantity</th>
+							<th>Sell Value</th>
+						</tr>
+						<tr>
 							<td>Icon</td>
 							<th>Stone Dagger</th>
 							<td><span id="stoneDaggers">0</span></td>
-							<td><b>Sells For <span id="stoneDaggerValue">2</span> Gold</b></td>
+							<td><b><span id="stoneDaggerValue">2</span> Gold</b></td>
 						</tr>
-						<tr></tr>
 					</table>
 				</div>
 				<div class="MiddlePane">
 				<b><u>Crafting</u></b><br><br>
 					<table style="width:100%; padding:5px"> <!--Table Below Contains Information On Current Craftable Items-->
+						<tr>
+							<th>Available Items</th>
+						</tr>
 						<tr>
 							<td><button class="Button" type="button" onClick="craft('stoneDagger')">Craft a Stone Dagger - 5 Stone & 5 Wood</button></td>
 						</tr>
@@ -207,28 +202,50 @@
 			<div id="BuildingsWindow">
 				<div class="LeftPane">
 					<b><u>Your Buildings</u></b><br><br>
-					<table style="width:100%; padding:5px">
+					<table class="Tables" style="width:100%; padding:5px">
 						<tr> <!--Table Contains Currently Owned Buildings-->
-							<th>Building</th>
-							<td>Level <span id="Level">1</span></td>
+							<th>Buildings</th>
+							<th>Level</th>
+							<th>Efficiency<th>
+						</tr>
+						<tr> 
+							<th>Logging Camp</th>
+							<td>Level <span id="loggingCampLevel">1</span></td>
+							<td>0.5<td>
+						</tr>
+						<tr>
+							<th>Mining Camp</th>
+							<td>Level <span id="miningCampLevel">1</span></td>
+							<td>0.5</td>
 						</tr>
 					</table>
 				</div>
 				<div class="MiddlePane">
 					<b><u>Upgrades</u></b><br><br>
-					<table style="width:100%; padding:5px">
+					<table class="Tables" style="width:100%; padding:5px">
 						<tr> <!--Table Contains Currently Available Building Upgrades-->
-							<th>Upgrade</th>
-							<td><span id="Cost">Cost</span></td>
+							<th>Building</th>
+							<th>Next Upgrade</th>
+							<th>Upgrade Cost</th>
+						</tr>
+						<tr> 
+							<td><b>Logging Camp</b></td>
+							<td><span id="loggingCampUpgrade">Stone Tools</span></td>
+							<td><span id="loggingCampUpgradeCost">20 Stone</span></td>
+						</tr>
+						<tr> 
+							<td><b>Mining Camp</b></td>
+							<td><span id="miningCampUpgrade">Stone Tools</span></td>
+							<td><span id="miningCampUpgradeCost">20 Stone</span></td>
 						</tr>
 					</table>
 				</div>
 				<div class="RightPane">
 					<b><u>New Buildings</u></b><br><br>
-					<table style="width:100%; padding:5px">
+					<table class="Tables" style="width:100%; padding:5px">
 						<tr> <!--Table Contains Currently Available Buildings-->
 							<th>Building</th>
-							<td><span id="Cost">Cost</span></td>
+							<th>Cost</th>
 						</tr>
 					</table>
 				</div>
@@ -238,7 +255,7 @@
 			<div id="HeroesWindow">
 				<div class="Hero1Pane"> <!--This Div Contains Information On Hero 1-->
 					<b><u><span id="hero_1_name">Hero 1 Name</span></u></b><br><br>
-					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+					<table class="Tables" id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
 						<tr>
 							<th style="width: 50%">Weapon</th>
 							<td style="width: 50%"><span id="hero1Weapon">fists</span></td>
@@ -259,7 +276,7 @@
 					</table>
 				<div class="StatsPane">
 					<br><b><u>Stats</u></b><br><br>
-					<table id="hero1StatsTable" style="width:100%; padding:10px">
+					<table class="Tables" id="hero1StatsTable" style="width:100%; padding:10px">
 						<tr>
 							<th style="width: 50%">Level</th>
 							<td style="width: 50%"><span id="hero1Level">1</span></td>
@@ -283,7 +300,7 @@
 				<div class="Hero2Pane"> <!--This Div Contains Information On Hero 2-->
 				<br>
 					<b><u><span id="hero_2_name">Hero 2 Name</span></u></b><br><br>
-					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+					<table class="Tables" id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
 						<tr>
 							<th style="width: 50%">Weapon</th>
 							<td style="width: 50%"><span id="hero2Weapon">fists</span></td>
@@ -304,7 +321,7 @@
 					</table>
 				<div class="StatsPane">
 					<br><b><u>Stats</u></b><br><br>
-					<table id="hero2StatsTable" style="width:100%; padding:10px">
+					<table class="Tables" id="hero2StatsTable" style="width:100%; padding:10px">
 						<tr>
 							<th style="width: 50%">Level</th>
 							<td style="width: 50%"><span id="hero2Level">1</span></td>
@@ -330,7 +347,7 @@
 			<div id="PetsWindow">
 				<div class="Pet1Pane"> <!--This Div Contains Information On Pet 1-->
 					<b><u><span id="pet_1_name">Pet 1 Name</span></u></b><br><br>
-					<table id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
+					<table class="Tables" id="EquipmentTable" style="width:100%; padding:5px; table-layout:fixed">
 						<tr>
 							<th style="width: 50%">Assigned To:</th>
 							<td style="width: 50%"><span id="pet1Hero">none</span></td>
@@ -338,7 +355,7 @@
 					</table>
 				<div class="StatsPane">
 					<br><b><u>Stats</u></b><br><br>
-					<table id="pet1StatsTable" style="width:100%; padding:10px">
+					<table class="Tables" id="pet1StatsTable" style="width:100%; padding:10px">
 						<tr>
 							<th style="width: 50%">Level</th>
 							<td style="width: 50%"><span id="pet1Level">1</span></td>
@@ -359,7 +376,7 @@
 				</div>
 				<div class="FoodPane">
 					<br><b><u>Food</u></b><br><br>
-					<table id="pet1FoodTable" style="width:100%; padding:10px">
+					<table class="Tables" id="pet1FoodTable" style="width:100%; padding:10px">
 						<tr>
 							<th style="width: 50%">Food Type</th>
 							<td style="width: 50%"><button type="button">Feed</button></td>
@@ -372,7 +389,7 @@
 			<!--h16-Contains The Elements That Make Up The Dungeon Window-->
 			<div id="DungeonWindow">
 				<div class="DungeonFloor1"> <!--This Div Contains Information On Dungeon Floor 1-->
-					<table style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
+					<table class="Tables" style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
 						<tr>
 							<th style="width: 50%">Floor One</th>
 							<td style="width: 50%">Monsters: Slime Baby</td>
@@ -382,7 +399,7 @@
 				</div>
 				
 				<div class="DungeonFloor2"> <!--This Div Contains Information On Dungeon Floor 2-->
-					<table style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
+					<table class="Tables" style="width:100%; padding:10px; table-layout:fixed; line-height:350%">
 						<tr>
 							<th style="width: 50%">Floor Two</th>
 							<td style="width: 50%">Monsters: Slime Soldier</td>
@@ -396,7 +413,7 @@
 			<div id="ResearchWindow">
 				<div class="LeftPane"> <!--This Div Contains Information On Already Researched Technology-->
 					<b>Researched</b>
-					<table style="width:100%; padding: 10px">
+					<table class="Tables" style="width:100%; padding: 10px">
 						<tr>
 							<td>Previously Researched 1</td>
 						</tr>
@@ -407,7 +424,7 @@
 				</div>
 				<div class="RightPane"> <!--This Div Contains Information On Available Research-->
 					<b>Available Research</b>
-					<table style="width:100%; padding: 10px">
+					<table class="Tables" style="width:100%; padding: 10px">
 						<tr>
 							<td>Available Research 1</td>
 						</tr>
@@ -422,7 +439,7 @@
 			<div id="MarketWindow">
 				<div class="LeftPane"> <!--This Div Contains Information On Selling Resources-->
 					<b>Sell Resources</b>
-					<table style="width:100%; padding: 10px">
+					<table class="Tables" style="width:100%; padding: 10px">
 						<tr>
 							<td>Resource</td>
 							<td>Resource Amount</td>
@@ -432,7 +449,7 @@
 				</div>
 				<div class="MiddlePane"> <!--This Div Contains Information On Buying Resources-->
 					<b>Buy Resources</b>
-					<table style="width:100%; padding: 10px">
+					<table class="Tables" style="width:100%; padding: 10px">
 						<tr>
 							<td>Resource</td>
 							<td>Resource Amount</td>
@@ -442,7 +459,7 @@
 				</div>
 				<div class="RightPane"> <!--This Div Contains Information On Buying Special Imports-->
 					<b>Special Imports</b>
-					<table style="width:100%; padding: 10px">
+					<table class="Tables" style="width:100%; padding: 10px">
 						<tr>
 							<td>Resource</td>
 							<td>Resource Amount</td>
